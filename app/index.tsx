@@ -1,8 +1,10 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, StatusBar } from "react-native";
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity , Linking, StatusBar  } from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/botao";
+import { Link } from "expo-router";
+
 
 function login() {
   return (
@@ -13,19 +15,26 @@ function login() {
       <View>
         <Text style={styles.text} >Faça Login Para Acessar o Sistema!</Text>
 
-        <InputField label="Email:" placeholder="Digite Email" />
-        <InputField label="Senha:" placeholder="Digite sua Senha" />
-        <Botao text="Entrar" color="black" />
+        <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false}/>
+        <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
+        
+          <TouchableOpacity>
+            <Botao href="/itens" text="Entrar" color="black" />
+          </TouchableOpacity>
+        
       </View>
-      <View style={styles.links}>
-        <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
+      <View style={styles.links}> 
+        <Link href="/cadastro" asChild>
+        <TouchableOpacity>
           <Text style={styles.link}>Cadastre-Se</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => Linking.openURL('https://www.google.com')}>
-          <Text style={styles.link}>Esqueceu sua senha?</Text>
-        </TouchableOpacity>
+        </Link>
+        <Link href ="/rec" asChild>
+            <TouchableOpacity>
+              <Text style={styles.link}>Esqueceu sua senha?</Text>
+            </TouchableOpacity>
+        </Link>
         </View>
-      <StatusBar style="auto" />
     </View>
   );
 }

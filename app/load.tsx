@@ -2,6 +2,7 @@ import { Image, View, StyleSheet } from "react-native";
 import { FontAwesome6 } from '@expo/vector-icons';
 import React from "react";
 
+
 const Load = () => {
     const styles = StyleSheet.create({
 
@@ -21,7 +22,7 @@ const Load = () => {
 
     return (
         <View style={styles.Load}>
-            <Image source={require('../components/senai.png')} style={styles.Logo} />
+            <Image source={require('../components/img/Logo.png')} style={styles.Logo} />
 
             <FontAwesome6 name="circle-notch" 
             size={60} 

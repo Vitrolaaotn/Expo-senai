@@ -1,12 +1,15 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { Link } from "expo-router";
+
 
 type BotaoProps = {
     text: string,
     color: string,
+    href: string,
 }
 
-const Botao= ({text, color}: BotaoProps) => {
+const Botao = ({text, color, href}: BotaoProps) => {
     const styles = StyleSheet.create({
         botao: {
             alignItems: 'center',
@@ -21,9 +24,11 @@ const Botao= ({text, color}: BotaoProps) => {
         },
     });
     return (
+        <Link href={href} asChild>
        <TouchableOpacity style={styles.botao}>
         <Text style={styles.textbotao}>{text}</Text>
       </TouchableOpacity>
+        </Link>
     );
 }
 

@@ -3,7 +3,8 @@ import { View, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import Itens from "../components/item";
 import { AntDesign,FontAwesome5, FontAwesome6, Entypo, Foundation} from '@expo/vector-icons';
 import Bottom from "../components/bottom";
-
+import { Link } from "expo-router";
+;
 const itens = () => {
     return (
         <View>
@@ -14,27 +15,30 @@ const itens = () => {
                     <Entypo name="magnifying-glass" size={24} color="#595959" />
                 </TouchableOpacity>
             </View>
+            
             <View>
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
-                <Itens id="956389" item="CADEIRA  SENAI" />
+                <Link href="/infoitens"><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens"><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens"><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens"><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens"><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens"><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens"><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
+                <Link href="/infoitens" ><Itens id="956389" item="CADEIRA  SENAI" /></Link>
             </View>
         </ScrollView>
             <View style={styles.addButtonContainer}>
+            <Link href="/additens" asChild>
                 <AntDesign name="pluscircle" size={50} color="red" />
+            </Link>
             </View>
             <Bottom color="#ff0000" coloricons= "#ffffff" bottom={0} />
         </View>
