@@ -3,16 +3,16 @@ import { View, Text, StyleSheet } from "react-native";
 import Header from "../components/header";
 import InventoryInput from "../components/invinput";
 import Bottom from "../components/bottom";
+import { AntDesign } from '@expo/vector-icons';
 export default function AddItens() {
         const styles = StyleSheet.create({
     paddingtop: {
         paddingTop: 60,
     }});
 
-    return(
-
+    return (
+        <View>
 <View>
-    <Header text="Cadastro de itens" color="red" colortxt="white" icon1="arrowleft" icon2="pluscircleo"/>
     <View style={styles.paddingtop}>
     <InventoryInput label='N inventario'/>
     <InventoryInput label='Descrição' />
@@ -20,7 +20,7 @@ export default function AddItens() {
     <InventoryInput label='Responsavel'/>
     <InventoryInput label='Data de registro'/>
     </View>
-    <Bottom color="ffff" coloricons= "#595959" bottom={-430} />
     </View>
-);
+</View>
+    );
 } 
