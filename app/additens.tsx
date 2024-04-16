@@ -8,7 +8,7 @@ import useTheme from "../temas/Temas";
 export default function AddItens() {
     const cores = useTheme();
         const styles = StyleSheet.create({
-    paddingtop: {
+        paddingtop: {
         paddingTop: 60,
     }});
 
