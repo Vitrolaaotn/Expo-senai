@@ -1,17 +1,17 @@
 {
   "expo": {
-    "name": "AppSenai",
-    "slug": "AppSenai",
+    "name": "Expo-Senai",
+    "slug": "Expo-Senai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "scheme": "AppSenai",
+    "scheme": "Expo-Senai",
     "assetBundlePatterns": [
       "**/*"
     ],
