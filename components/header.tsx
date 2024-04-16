@@ -1,27 +1,37 @@
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import {AntDesign } from '@expo/vector-icons';
+import { StyleSheet, Text, View, Image} from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
-export default function Header({ text, color, colortxt, icon1, icon2 }) {
-    const styles = StyleSheet.create({
-        displaytop: {
-            padding: 20,
-            paddingTop: 60,
-            width: "100%",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            backgroundColor: color
-        }
-    });
-
-    return (
-        <View>
-            <View style={styles.displaytop}>
-                <AntDesign name={icon1} size={24} color={colortxt} />
-                <Text style={{ color: colortxt }}>{text}</Text>
-                <TouchableOpacity>
-                <AntDesign name={icon2} size={24} color={colortxt} />
-                </TouchableOpacity>
-            </View>
-        </View>
-    );
+type HeaderProps ={
+  cor: string,
+  texto: string
 }
+
+export default function Header ({cor, texto}: HeaderProps) {
+    return (
+      <View style={[stylesHea.header, {backgroundColor: cor}]}>
+          <StatusBar style='light'/>
+          <Image source={require('../assets/Logo.png')}/>
+          <Text style={stylesHea.textoed}>{texto}</Text>
+      </View>
+    );
+  }
+
+  const stylesHea = StyleSheet.create({
+    header: {
+      height: 200,
+      width: '100%',
+      justifyContent:'center',
+      alignItems:'center',
+      borderBottomLeftRadius: 5,
+      borderBottomRightRadius: 5,
+    },
+
+    textoed:{
+      fontWeight: '400',
+      fontSize: 20,
+      lineHeight: 24,
+      color: '#FFFFFF',
+      margin: 5,
+    },
+  }
+)
