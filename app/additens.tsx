@@ -17,15 +17,15 @@ export default function AddItens() {
             backgroundColor: cores.bgPrimary,
             height: "100%",
         }}>
-<View>
-    <View style={styles.paddingtop}>
-    <InventoryInput label='N inventario'/>
-    <InventoryInput label='Descrição' />
-    <InventoryInput label='Local'/>
-    <InventoryInput label='Responsavel'/>
-    <InventoryInput label='Data de registro'/>
+    <View>
+        <View style={styles.paddingtop}>
+        <InventoryInput label='N inventario'/>
+        <InventoryInput label='Descrição' />
+        <InventoryInput label='Local'/>
+        <InventoryInput label='Responsavel'/>
+        <InventoryInput label='Data de registro'/>
+        </View>
+        </View>
     </View>
-    </View>
-</View>
     );
 } 
