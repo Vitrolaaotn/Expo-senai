@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
+import  useTheme from "../temas/Temas";
 
 
 export default function InventoryInput({label}) {
     const [hover, sethover] = React.useState('black');
+    const cores = useTheme();
     const styles = StyleSheet.create({
     inventoryInput: {
         marginLeft: 25,
@@ -16,9 +18,9 @@ export default function InventoryInput({label}) {
         position: 'absolute',
         top: 5, 
         left: 10,
-        backgroundColor: '#fff',
+        backgroundColor: cores.bgPrimary,
         paddingHorizontal: 2,
-        color: hover,
+        color: cores.textColor,
         fontWeight: 'bold',
     },
     input: {
