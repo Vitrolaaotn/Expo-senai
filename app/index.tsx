@@ -43,7 +43,7 @@ function login() {
     
     }>
       <View>
-        <Logo text="Login" color={cores.bgPrimary} />
+        <Logo text="Login" color={backgroundColor} />
       </View>
       <View>
         <Text style={styles.text}>Faça Login Para Acessar o Sistema!</Text>
@@ -51,7 +51,7 @@ function login() {
         <InputField label="Email:" placeholder="Digite Email" secureTextEntry={false} />
         <InputField label="Senha:" placeholder="Digite sua Senha" secureTextEntry={true} />
         <Link href="./drawer/home/index" asChild>
-          <Botao text="Entrar" color={cores.bgSecondary} href="./drawer/home/itens"/>
+          <Botao text="Entrar" color={corbotoes} href="./drawer/home/itens"/>
         </Link>
       </View>
       <View>
