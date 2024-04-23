@@ -1,5 +1,8 @@
 import React from "react";
 import { Image, Text, View, StyleSheet } from "react-native";
+import  useTheme from "../temas/Temas";
+
+
 
 type ItensProps = {
     id: string,
@@ -17,15 +20,16 @@ const Itens = ({id, item }: ItensProps) => {
 
 export default Itens;
 
+const cores = useTheme()
 const styles = StyleSheet.create({
     display: {
-        borderBottomColor: '#f5f5f5',
+        borderBottomColor: cores.bgprimaryvariant,
         borderBottomWidth: 2,
     },
     text : {
         fontSize: 20,
         fontWeight: '500',
-        color: 'black',
+        color: cores.textcolorvariant,
         alignContent: 'center',
         marginTop: 20,
         marginLeft: 25,

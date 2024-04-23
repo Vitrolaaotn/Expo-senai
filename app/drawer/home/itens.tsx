@@ -4,10 +4,13 @@ import Itens from "../../../components/item";
 import { AntDesign,FontAwesome5, FontAwesome6, Entypo, Foundation} from '@expo/vector-icons';
 import Bottom from "../../../components/bottom";
 import { Link } from "expo-router";
+import useTheme from "../../../temas/Temas";
+
 
 const itens = () => {
+    const cores = useTheme()
     return (
-        <View>
+        <View style={{backgroundColor: cores.bgPrimary }}>
         <ScrollView>
             <View>
                 <Itens id="956389" item="CADEIRA  SENAI" />
