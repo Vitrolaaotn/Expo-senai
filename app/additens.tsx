@@ -1,9 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet,useColorScheme } from "react-native";
-import Header from "../components/header";
 import InventoryInput from "../components/invinput";
-import Bottom from "../components/bottom";
-import { AntDesign } from '@expo/vector-icons';
 import useTheme from "../temas/Temas";
 export default function AddItens() {
     const cores = useTheme();

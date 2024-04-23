@@ -6,6 +6,7 @@ import InputField from '../components/input';
 import Botao from '../components/botao';
 import useTheme from '../temas/Temas';
 
+
 export default function Cadastro() {
   const cores = useTheme();
   return (

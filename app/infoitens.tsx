@@ -2,9 +2,6 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import Header from "../components/header";
 import ProdutoInfo from "../components/produtoinfo";
-import Bottom from "../components/bottom";
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import  useTheme from "../temas/Temas";
 
