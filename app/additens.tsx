@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet,useColorScheme } from "react-native";
 import InventoryInput from "../components/invinput";
 import useTheme from "../temas/Temas";
+import { StatusBar } from "react-native";
 export default function AddItens() {
     const cores = useTheme();
         const styles = StyleSheet.create({
@@ -13,7 +14,9 @@ export default function AddItens() {
         <View style={{
             backgroundColor: cores.bgPrimary,
             height: "100%",
+           
         }}>
+        <StatusBar backgroundColor={cores.bgprimaryvariant} barStyle="light-content" />
     <View>
         <View style={styles.paddingtop}>
         <InventoryInput label='N inventario'/>

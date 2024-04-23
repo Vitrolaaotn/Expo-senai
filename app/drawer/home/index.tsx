@@ -1,9 +1,8 @@
-import React ,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, StatusBar, TouchableOpacity } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 import { Camera } from 'expo-camera';
 import useTheme from "../../../temas/Temas";
-
 
 export default function Scanner() {
     const [openCamera, setOpenCamera] = useState(false);
@@ -22,6 +21,7 @@ export default function Scanner() {
             right: 20,
         },
     });
+
     useEffect(() => {
         (async () => {
             const { status } = await Camera.requestCameraPermissionsAsync();

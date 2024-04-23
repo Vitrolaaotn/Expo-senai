@@ -7,6 +7,8 @@ import  useTheme from "../temas/Temas";
 type ItensProps = {
     id: string,
     item: string,
+    href: string,
+
 }
 
 const Itens = ({id, item }: ItensProps) => {
