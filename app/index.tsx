@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, useColorScheme} from "react-native";
 import Logo from "../components/logo";
 import InputField from "../components/input";
 import Botao from "../components/botao";
@@ -9,6 +9,9 @@ import useTheme from "../temas/Temas";
 function login() {
 
   const cores = useTheme();
+  const Theme = useColorScheme();
+  const backgroundColor = Theme === 'dark' ? cores.bgPrimary : '#000000';
+  const corbotoes = Theme === 'dark' ? cores.bgSecondary : '#000000';
 
   const styles = StyleSheet.create({
     text: {

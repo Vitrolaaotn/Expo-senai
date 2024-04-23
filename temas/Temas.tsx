@@ -9,7 +9,7 @@ interface Cores{
     textcolorvariant:string;
 }
 
-const light = {
+const lightTheme = {
     bgPrimary: "#ffffff",
     bgSecondary: "#ff0000",
     bgInfo: "#f5f5f5",
@@ -17,7 +17,7 @@ const light = {
     bgprimaryvariant: "#F5F5F5",
     textcolorvariant: "#595959",
 }
-const dark = {
+const darkTheme = {
     bgPrimary: "#240707",
     bgSecondary: "#ff0000",
     textColor: "#ffffff",
@@ -28,9 +28,7 @@ const dark = {
 
 export default function useTheme(){
     const scheme = useColorScheme();
-    console.log(scheme);
-    if(scheme === "dark"){
-        return dark;
-    }
-    return light;
+    
+    return scheme === "dark" ? darkTheme : lightTheme;
+
 }
