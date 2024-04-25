@@ -24,21 +24,26 @@ export default function Scanner() {
 
     useEffect(() => {
         (async () => {
-            const { status } = await Camera.requestCameraPermissionsAsync();
-            setHasPermission(status === 'granted');
+            try {
+                const { status } = await Camera.requestCameraPermissionsAsync();
+                setHasPermission(status === 'granted');
+            }
+            catch (e) {
+                console.log(e);
+            }
         })();
     }, []);
 
     if (hasPermission === null) {
         return <View />;
     }
-        if (hasPermission === null) {
+    if (hasPermission === null) {
         return <View />;
     }
     if (hasPermission === false) {
         return (
             <>
-                <StatusBar backgroundColor={cores.bgprimaryvariant} barStyle="light-content" />
+                <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
                 <Text>Sem acesso a camera!</Text>
             </>
         );
@@ -47,7 +52,7 @@ export default function Scanner() {
     if (openCamera) {
         return (
             <View style={{ flex: 1 }}>
-                <StatusBar backgroundColor={cores.bgprimaryvariant} barStyle="light-content" />
+                <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
                 <Camera style={{ flex: 1 }} />
                 <TouchableOpacity style={styles.closeButton} onPress={() => setOpenCamera(false)}>
                     <MaterialIcons name="close" size={30} color={cores.textColor} />
@@ -58,7 +63,7 @@ export default function Scanner() {
 
     return(
         <>
-            <StatusBar backgroundColor={cores.bgprimaryvariant} barStyle="light-content" />
+            <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
             <View style={styles.displaycode}>
                 <TouchableOpacity onPress={() => setOpenCamera(true)}>
                     <MaterialIcons name="qr-code-scanner" size={300} color={cores.textColor} />

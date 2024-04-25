@@ -1,16 +1,15 @@
 import { DrawerToggleButton } from "@react-navigation/drawer";
 import { Tabs } from "expo-router";
-import { ScreenStackHeaderSearchBarView } from "react-native-screens";
 import { FontAwesome5, FontAwesome6 } from '@expo/vector-icons';
 import useTheme from "../../../temas/Temas";
-import { StatusBar } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 
 export default function Layout(){
     const cores = useTheme();
     return(
     <>
-    <StatusBar backgroundColor={cores.bgprimaryvariant} barStyle="light-content" />
+    
     <Tabs screenOptions={{
         headerTitleAlign: "center",
         headerStyle: {
@@ -24,22 +23,19 @@ export default function Layout(){
         ),
 
         headerRight: () => (
-            ScreenStackHeaderSearchBarView ({
-                placeholder: "Pesquisar",
-            })
+            <TouchableOpacity>
+                <FontAwesome5 name="user" size={24} color={cores.textColor} />
+            </TouchableOpacity>
         )
         
     }}>
-        <Tabs.Screen
-        name="index"
-        options={{
+        <Tabs.Screen name="index" options={{
             title: "Scanner",
             tabBarIcon: ({ color }) => (
                 <FontAwesome6 name="camera-rotate" size={24} color={cores.bgPrimary} />
             ),
-                        tabBarStyle: {
-                backgroundColor: cores.bgSecondary,
-                
+            tabBarStyle: {
+            backgroundColor: cores.bgSecondary,
             },
             tabBarActiveTintColor: cores.bgPrimary,
             tabBarInactiveTintColor: cores. bgPrimary,
@@ -48,16 +44,13 @@ export default function Layout(){
 
         </Tabs.Screen>
 
-        <Tabs.Screen 
-        name="itens"
-        options={{
+        <Tabs.Screen name="itens" options={{
             title: "Itens",
             tabBarIcon: ({ color }) => (
                 <FontAwesome5 name="list-ol" size={24} color={cores.bgPrimary} />
             ),
             tabBarStyle: {
                 backgroundColor: cores.bgSecondary,
-                
             },
             tabBarActiveTintColor: cores.bgPrimary,
             tabBarInactiveTintColor: cores.bgPrimary,

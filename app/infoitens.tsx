@@ -1,9 +1,10 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, StatusBar } from "react-native";
 import ProdutoInfo from "../components/produtoinfo";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import useTheme from "../temas/Temas";
 import { Link } from "expo-router";
+
 
 export default function InfoItens() {
     const cores = useTheme();
@@ -27,11 +28,14 @@ export default function InfoItens() {
         },
     });
     return(
+
         <View style={{
             paddingTop: 150,
             backgroundColor: cores.bgPrimary,
             height: "100%",
         }}>
+            <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
+            
             <View style={styles.paddingtop}>
                 <ProdutoInfo label='N inventario' info='956389'/>
                 <ProdutoInfo label='Descrição' info='CADEIRA  SENAI'/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, useColorScheme } from 'react-native';
+import { View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import Logo from '../components/logo';
 import InputField from '../components/input';

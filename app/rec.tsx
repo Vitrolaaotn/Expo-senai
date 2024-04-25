@@ -23,7 +23,7 @@ function Recuperar(){
 });
     return(
     <>
-    <StatusBar backgroundColor={cores.bgprimaryvariant} barStyle="light-content" />
+    <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
     <View style={{
         backgroundColor: cores.bgPrimary,
         height: '100%',

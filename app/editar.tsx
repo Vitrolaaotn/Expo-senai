@@ -1,12 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, StatusBar} from "react-native";
 import InventoryInput from "../components/invinput";
 import useTheme from "../temas/Temas";
+
+
 export default function AddItens() {
     const cores = useTheme();
-        const styles = StyleSheet.create({
-    paddingtop: {
-        paddingTop: 60,
+    const styles = StyleSheet.create({
+        paddingtop: {
+            paddingTop: 60,
     }});
 
     return (
@@ -16,15 +18,16 @@ export default function AddItens() {
                 height: '100%',
             }
         }>
-<View>
-    <View style={styles.paddingtop}>
-    <InventoryInput label='N inventario'/>
-    <InventoryInput label='Descrição' />
-    <InventoryInput label='Local'/>
-    <InventoryInput label='Responsavel'/>
-    <InventoryInput label='Data de registro'/>
-    </View>
-    </View>
-</View>
+        <StatusBar backgroundColor={cores.bgPrimaryVariant} barStyle="light-content" />
+        <View>
+            <View style={styles.paddingtop}>
+            <InventoryInput label='N inventario'/>
+            <InventoryInput label='Descrição' />
+            <InventoryInput label='Local'/>
+            <InventoryInput label='Responsavel'/>
+            <InventoryInput label='Data de registro'/>
+            </View>
+            </View>
+        </View>
     );
 } 
